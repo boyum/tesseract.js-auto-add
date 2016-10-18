@@ -1,0 +1,26 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 10px 15px;
+}
+
+.preview-image {
+  display: block;
+  max-width: 100%;
+}
+
+.progress-container {
+  visibility: hidden;
+  width: 100%;
+}
+
+.progress {
+  background-color: tomato;
+  height: 25px;
+  max-width: 100%;
+  width: 0;
+}
