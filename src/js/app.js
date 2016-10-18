@@ -25,7 +25,7 @@
 
   function parseImage(image) {
     Tesseract.recognize(image, {
-      tessedit_char_blacklist: 'abcdefghijklmnopqrstuvwxyzæøå'
+      tessedit_char_blacklist: 'abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ'
     })
     .progress(message => {
       if (message.status === 'recognizing text') {
@@ -41,7 +41,7 @@
       let sum = 0;
 
       result.words.forEach((word) => {
-        if (word.text.match(/\d/)) {
+        if (word.text.match(/[0-9]+/)) {
           resultBox.innerHTML += word.text + '<br />';
           sum += +word.text;
         }
